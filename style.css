@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: 'poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(3, 3, 58);
+
+}
+.leftsection img{
+    width: 400px;
+    height: 400px;
+}
+
+.left {
+    margin-left: 120px;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    color: white;
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(153, 153, 226);
+
+
+}
+
+main hr {
+    border: 0;
+    background-color: rgb(147, 147, 245);
+    height: 2px;
+    margin: 40px;
+}
+
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 123px 0;
+}
+
+
+.leftsection {
+    font-size: 2rem;
+    margin-left: 100px;
+}
+
+.rightsection img {
+    width: 40%;
+    margin-left: 400px;
+    display: flex;
+    border: 4px solid rgb(176, 108, 240);
+    border-radius: 59%;
+}
+
+.purple {
+    color: rgb(176, 108, 240);
+}
+
+#element {
+    color: rgb(176, 108, 240);
+}
+
+.secondsection {
+    max-width: 80vw;
+    margin: auto;
+    height: 75vh;
+}
+
+.secondsection h1 {
+    font-size: 1.9rem;
+}
+
+.secondsection .box {
+    background-color: white;
+    width: 80vw;
+    height: 2px;
+    margin: 55px 0;
+   display: flex;
+}
+
+.secondsection .vertical {
+    background-color: white;
+    width: 1px;
+    height: 93px;
+    margin: 0 150px;
+}
+
+.vertical-title{
+position: relative;
+top: 100px;
+width: 150px;
+font-size: 15px;
+}
+
+.allskills{
+    margin-top: 230px;
+}
+
+.skills{
+    background-color: rgb(2, 2, 62);
+    display: flex;  
+    width: 80rem;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.skills .html{
+    background-color: rgb(0, 196, 196);
+    width: 65rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.skills .python{
+    background-color:orange;
+    width: 55rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.skills .c{
+    background-color:crimson;
+    width: 45rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.skills .sql{
+    background-color:lawngreen;
+    width: 65rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.thirdsection{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80vh;
+}
+
+h3{
+    text-align: center;
+    display: flex;
+    margin-left: 700px;
+    font-family: 'poppins';
+    font-size: 2rem;
+}
+
+.project1, .project2 {
+    background-color: rgb(4, 28, 72);
+    border-radius: 20px;
+    height: 25rem;
+    width: 25rem;
+    margin-top: 60px;
+    font-family: 'poppins';
+    font-size: 1.5rem;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.project1 .inner, .project2 .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.project1:hover .inner, .project2:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.project1 .front, .project2 .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    background-color: rgb(4, 28, 72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project1 .front img, .project2 .front img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.project1 .back, .project2 .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: rgb(147, 147, 245);
+    color: rgb(4, 28, 72);
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(147, 147, 245, 0.5);
+}
+
+.project1{
+    background-color: rgb(4, 28, 72);
+    border-radius: 20px;
+    height: 25rem;
+    width: 25rem;
+    text-align: center;
+    margin-top: 60px;
+    font-family:'poppins';
+    font-size: 1.5rem;
+}
+
+.project1:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+.project2:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+.project1:hover, .project2:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(147, 147, 245, 0.8);
+}
+
+.project2{
+    background-color: rgb(4, 28, 72);
+    border-radius: 20px;
+    height: 25rem;
+    width: 25rem;
+    text-align: center;
+    margin-top: 60px;
+    font-family:'poppins';
+    font-size: 2rem;
+}
+
+
+.project1:hover .desc, .project2:hover .desc {
+    height: 30%;
+    opacity: 1;
+}
+
+.project1 img{
+    width: 280px;
+    height: 200px;
+    border-radius: 20px;
+
+    margin-top: 30px;
+}
+
+.project2 img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 9px;
+    margin-top: 22px;
+}
+
+
+footer{
+    height: 500pxpx;
+    background-color: rgb(3, 3, 48);
+}
+
+footer .grey{
+    color: grey;
+}
+
+footer{
+    text-align: center;
+}
+
+.email{
+    padding-top: 40px;
+}
+
+.phone{
+    margin-right: 134px;
+    padding-top: 20px
+}
+
+.social-icon{
+    padding: 30px;
+}
+
+.social-icon a{
+    justify-content: center;
+    display:inline-flex;
+    align-items: center ;
+    background-color: transparent;
+    border: 0.2rem solid rgb(147, 147, 245);
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.social-icon a:hover{
+color: rgb(3, 3, 48);
+transform: scale(1.0) translateY(-5px);
+background-color: rgb(147, 147, 245);
+box-shadow: 0 0 30px rgb(147, 147, 245);
+}
