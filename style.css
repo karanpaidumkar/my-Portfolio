@@ -16,7 +16,20 @@ nav {
     align-items: center;
     height: 80px;
     background-color: rgb(3, 3, 58);
+    padding: 15px 40px;
+    position: relative;
 
+}
+
+.menu-btn {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+.right ul {
+    display: flex;
+    gap: 25;
 }
 .leftsection img{
     width: 400px;
@@ -210,6 +223,7 @@ h3{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    inset: 0;
 }
 
 .project1 .front img, .project2 .front img {
@@ -235,6 +249,7 @@ h3{
     font-size: 1.2rem;
     text-align: center;
     box-shadow: 0 0 30px rgba(147, 147, 245, 0.5);
+    inset: 0;
 }
 
 .project1{
@@ -281,19 +296,24 @@ h3{
 }
 
 .project1 img{
-    width: 280px;
-    height: 200px;
     border-radius: 20px;
-
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin-top: 30px;
+    overflow: hidden;
 }
 
 .project2 img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+   width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
     margin-left: 9px;
     margin-top: 22px;
+    overflow: hidden;
 }
 
 
@@ -348,105 +368,237 @@ box-shadow: 0 0 30px rgb(147, 147, 245);
 
 @media (max-width: 768px) {
 
-    /* NAVBAR */
-    nav {
+    .menu-btn {
+        display: block;
+    }
+    body{
+        background-color: rgb(0, 0, 33);
+    }
+
+    nav{
+        background-color: rgb(3, 3, 58);
+    }
+
+    .right {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        background-color: rgb(0, 0, 33);
+        border-radius: 10px;
+        display: none;
+    }
+
+    .right ul {
         flex-direction: column;
+        padding: 15px;
+    }
+
+    .right ul li {
+        margin: 10px 0;
         text-align: center;
     }
 
-    nav .right ul {
-        flex-direction: column;
-        padding: 0;
+    .right.active {
+        display: block;
     }
 
-    nav .right ul li {
-        margin: 10px 0;
+    span{
+        font-size: 20px;
     }
 
-    /* FIRST SECTION */
+    .left{
+        margin-left: 20px;
+    }
+
+    .leftsection .image {
+        display: none;
+    }
+
+    .intro{
+        font-size: 30px;
+        display: inline;
+    }
+
     .firstsection {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         padding: 20px;
     }
 
-    .leftsection {
+    /* Move image FIRST (below navbar) */
+    .rightsection {
+        order: 1;
         width: 100%;
-        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
     }
 
     .rightsection img {
         width: 70%;
-        margin-top: 20px;
+        max-width: 250px;
+        margin-left: 0%;
     }
 
-    /* SKILLS TIMELINE */
-    .box {
-        flex-direction: column;
-        align-items: center;
+    /* Intro comes AFTER image */
+    .leftsection {
+        order: 2;
+        width: 100%;
+        margin-left: 19px;
     }
 
-    .vertical {
-        margin: 15px 0;
-    }
-
-    /* SKILL BARS */
-    .allskills {
-        padding: 0 20px;
-    }
-
-    /* PROJECTS */
-    .thirdsection {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project1, .project2 {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
+    .secondsection {
         padding: 20px;
     }
 
-    .social-icon a {
-        margin: 0 8px;
-        font-size: 1.5rem;
-    }
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    .firstsection {
-        flex-direction: column;
+    .secondsection h1 {
+        font-size: 1.8rem;
         text-align: center;
+        margin-bottom: 40px;
     }
 
-    .rightsection img {
-        width: 60%;
-        margin-top: 20px;
+    /* Timeline → vertical list */
+    .box {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        display: none;
+    }
+
+
+    .vertical-title {
+        font-size: 1rem;
+        line-height: 1.4;
+        display: none;
+    }
+
+    /* Skill bars container */
+    .allskills {
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 100px;
+    }
+
+    .skills {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+
+    /* Individual skill bars */
+    .skills div {
+        font-size: 0.95rem;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: left;
     }
 
     .thirdsection {
-        justify-content: center;
-        gap: 20px;
+        display: flex;
+        flex-direction: column;   /* 👈 stack vertically */
+        align-items: center;
+        gap: 25px;               /* space between projects */
     }
 
-    .project1, .project2 {
-        width: 45%;
+    .project1,
+    .project2 {
+        width: 90%;              /* full-width cards */
     }
-}
- 
 
-img {
-    max-width: 100%;
-    height: auto;
+   .project1,
+    .project2 {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .project1 img,
+    .project2 img {
+        max-height: 220px;
+        object-fit: contain; /* keeps full image visible */
+    }
+
+    .inner {
+        transform: none !important;
+    }
+
+    .back {
+        position: relative;
+        transform: none;
+    }
+
+    .inner {
+        transform: none !important;
+    }
+
+    .inner:hover {
+        transform: none;
+    }
+
+    .front,
+    .back {
+        position: relative;
+        backface-visibility: visible;
+    }
+
+    .back {
+        display: none; /* hide back content */
+    }
+
+    .phone{
+    text-align: center;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 50px;
+    }
+
+    .email{
+    text-align: center;
+    align-items: center;
+    margin-left: 0px;
+    }
+
 }
 
-html {
-    scroll-behavior: smooth;
+/* MODAL BACKDROP */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL BOX */
+.modal-content {
+    background: #1e1e3f;
+    color: #fff;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    animation: popup 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

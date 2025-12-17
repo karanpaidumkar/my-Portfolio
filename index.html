@@ -16,9 +16,12 @@
     <header>
         <nav>
             <div class="left">
-                <marquee behavior="" direction="">KARAN PAIDUMKAR</marquee>
+               <span>KARAN PAIDUMKAR</span>
             </div>
-            <div class="right">
+            <div class ="menu-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="right" id="navLinks">
                 <ul>
                     <li><a href="#home">About</a></li>
                     <li><a href="#myskills">Services</a></li>
@@ -32,21 +35,14 @@
         <section class="firstsection" id="home">
             <div class="leftsection">
                 <div class="image"><img src="bg-removebg-preview.png" alt=""></div>
-                Hi, My name is <span class="purple">Karan Paidumkar</span>
+                <div class="intro">Hi, My name is <span class="purple">Karan Paidumkar</span>
                 <div>and i am a passionate</div>
                 <div><!-- Element to contain animated typing -->
                     <span id="element"></span>
                     <!-- Load library from the CDN -->
                     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
                     <!-- Setup and start animation! -->
-                    <script>
-                        var typed = new Typed('#element', {
-                            strings: ['Web Developer', 'Python Developer', 'C Programmer', 'MySQL Developer'],
-                            typeSpeed: 50,
-                            backspeed: 50,
-                            loop: true,
-                        });
-                    </script>
+                </div>
                 </div>
             </div>
             <div class="rightsection">
@@ -131,6 +127,14 @@
             <a href="https://github.com/karanpaidumkar"><i class="fa-brands fa-github"></i></a>
         </div>
     </footer>
+    <div class="modal" id="projectModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+    <script src="script.js"></script>
 </body>
 
 </html>
