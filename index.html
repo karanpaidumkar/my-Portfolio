@@ -16,9 +16,9 @@
     <header>
         <nav>
             <div class="left">
-               <span>KARAN PAIDUMKAR</span>
+                <span>KARAN PAIDUMKAR</span>
             </div>
-            <div class ="menu-btn" onclick="toggleMenu()">
+            <div class="menu-btn" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="right" id="navLinks">
@@ -36,13 +36,13 @@
             <div class="leftsection">
                 <div class="image"><img src="bg-removebg-preview.png" alt=""></div>
                 <div class="intro">Hi, My name is <span class="purple">Karan Paidumkar</span>
-                <div>and i am a passionate</div>
-                <div><!-- Element to contain animated typing -->
-                    <span id="element"></span>
-                    <!-- Load library from the CDN -->
-                    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-                    <!-- Setup and start animation! -->
-                </div>
+                    <div>and i am a passionate</div>
+                    <div><!-- Element to contain animated typing -->
+                        <span id="element"></span>
+                        <!-- Load library from the CDN -->
+                        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                        <!-- Setup and start animation! -->
+                    </div>
                 </div>
             </div>
             <div class="rightsection">
@@ -112,28 +112,35 @@
         </section>
     </main>
     <footer id="foot">
-        <div class="email">
-            Email Id:-<span class="grey">www.karanpaidumkar2007@gmail.com</span>
-        </div>
-        <div class="phone">
-            Mobile Number:- <span class="grey">+91 9300085456</span>
+        <div id="contactme">Contact Me</div>
+        <div class="contact">
+            <div class="email">
+                <a href="mailto:karanpaidumkar2007@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="phone">
+                <a href="tel:+919300085456"><i class="fa-solid fa-phone"></i></a>
+            </div>
         </div>
         <div class="social-icon">
-            <a href="https://www.instagram.com/ndudq.exe"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/karan-paidumkar-874a09378/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ndudq.exe"><i class="fa-brands fa-instagram"></i><span class="socialnames">Instagram</span></a>
+            <a href="https://www.linkedin.com/in/karan-paidumkar-874a09378/"><i class="fa-brands fa-linkedin"></i><span class="socialnames">LinkedIn</span></a>
             <a href="https://www.snapchat.com/add/karanpaidumkard?share_id=Ai2LPswOVfg&locale=en-GB"><i
-                    class="fa-brands fa-snapchat"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61582876601137"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://github.com/karanpaidumkar"><i class="fa-brands fa-github"></i></a>
+                    class="fa-brands fa-snapchat"></i><span class="socialnames">Snapchat</span></a>
+            <a href="https://www.facebook.com/profile.php?id=61582876601137"><i class="fa-brands fa-facebook"></i><span class="socialnames">Facebook</span></a>
+            <a href="https://github.com/karanpaidumkar"><i class="fa-brands fa-github"></i><span class="socialnames">GitHub</span></a>
+        </div>
+         <div class="copyright">
+            &copy; 2025 Karan Paidumkar. All rights reserved.
         </div>
     </footer>
     <div class="modal" id="projectModal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+        </div>
     </div>
-</div>
+    
     <script src="script.js"></script>
 </body>
 
