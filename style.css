@@ -340,7 +340,12 @@ footer{
 }
 
 .social-icon{
-    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;              /* Space between icons */
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .social-icon a{
@@ -373,6 +378,7 @@ box-shadow: 0 0 30px rgb(147, 147, 245);
     }
     body{
         background-color: rgb(0, 0, 33);
+        overflow-x: hidden;
     }
 
     nav{
@@ -557,6 +563,30 @@ box-shadow: 0 0 30px rgb(147, 147, 245);
     text-align: center;
     align-items: center;
     margin-left: 0px;
+    }
+
+    #project {
+        text-align: center;
+        margin: 20px auto;
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+
+        /* Safety */
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .social-icon {
+    display: inline;
+        gap: 10px;
+    }
+
+     .social-icon a {
+        font-size: 22px;
+        width: 42px;
+        height: 42px;
+        text-decoration: none;
     }
 
 }
