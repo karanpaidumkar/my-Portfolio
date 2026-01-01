@@ -18,9 +18,19 @@ const links = document.querySelectorAll("#navLinks a");
     });
 
 
-    function openModal(title, description) {
+    function openModal(title, description, link = null) {
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalDesc").innerText = description;
+
+const modalLink = document.getElementById("modalLink");
+
+        if (link) {
+            modalLink.href= link;
+            modalLink.style.display = "inline";
+        } else {
+            modalLink.style.display = "none";
+        }
+
     document.getElementById("projectModal").style.display = "flex";
 }
 
@@ -28,23 +38,31 @@ function closeModal() {
     document.getElementById("projectModal").style.display = "none";
 }
 
-/* Mobile tap detection */
-if (window.innerWidth <= 768) {
-    document.querySelector(".project1").addEventListener("click", () => {
+const project1 = document.querySelector(".project1");
+const project2 = document.querySelector(".project2");
+
+function isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
+}
+
+if (isMobile()) {
+    project1.addEventListener("click", (e) => {
+        e.preventDefault();
         openModal(
             "A E-Commerce Website",
-            "A E-Commerce Shopping Website made using only HTML & CSS."
+            "A E-Commerce Shopping Website made using only HTML & CSS.",
+            "#"
         );
     });
 
-    document.querySelector(".project2").addEventListener("click", () => {
+    project2.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") return;
+
+        e.preventDefault();
         openModal(
             "A Calculator",
-            "A working Calculator using HTML, CSS & JavaScript."
+            "A working Calculator using HTML, CSS & JavaScript.",
+            "https://karanpaidumkar.github.io/A-Calculator/"
         );
     });
 }
-
-document.getElementById("calculatorcard").addEventListener("click", () => {
-    window.open('https://karanpaidumkar.github.io/A-Calculator/', '_blank');
-});
