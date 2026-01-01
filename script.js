@@ -44,3 +44,7 @@ if (window.innerWidth <= 768) {
         );
     });
 }
+
+document.getElementById("calculatorcard").addEventListener("click", () => {
+    window.open('https://karanpaidumkar.github.io/A-Calculator/', '_blank');
+});
